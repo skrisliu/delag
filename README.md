@@ -3,4 +3,4 @@ DELAG: Deep Ensemble Learning with ATC and Gaussian processes for LST Reconstruc
 
 ## Code and data coming soon
 
-This is a GitHub repo at [github.com/skrisliu/delag](github.com/skrisliu/delag)
+This is a GitHub repo at [github.com/skrisliu/delag](https://github.com/skrisliu/delag)
