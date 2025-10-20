@@ -1,2 +1,4 @@
-# delag
-DELAG: DEEP ENSEMBLE LEARNING FOR LST RECONSTRUCTION IN LANDSAT CROSS-TRACK AREAS
+# DELAG
+DELAG: Deep Ensemble Learning with ATC and Gaussian processes for LST Reconstruction in Landsat cross-track areas
+
+## Code and data coming soon
