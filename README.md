@@ -1,5 +1,5 @@
 # DELAG
-DELAG: Deep Ensemble Learning with ATC and Gaussian processes for LST Reconstruction in Landsat cross-track areas
+Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty Quantification
 
 ## Code and data coming soon
 
