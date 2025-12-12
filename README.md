@@ -1,60 +1,75 @@
 # DELAG
-Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty Quantification
+Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty Quantification. 
 
-## Code and data coming soon
+Accepted to IEEE Transactions on Geoscience and Remote Sensing. 
+
+Shengjie Kris Liu: skrisliu@gmail.com 
+
+## Code and data update ongoing: last updated 20251212
 
 This is a GitHub repo at [github.com/skrisliu/delag](https://github.com/skrisliu/delag)
 
 
+## Environment & Package Setup
+Run these commands in sequence (terminal/Anaconda Prompt):
+
+```bash
+conda create --name py39c python=3.9    
+conda activate py39c 
+pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117   
+pip install gpytorch==1.13  
+pip install numpy==1.26.4   
+```
+
+
 ## Preprocessing
-
-Step 1: Unzip all Landsat data in a year
-
-Step 1b optional: Reproject data to the same UTM zone (for London only)
-
-Step 2: Clip data based on UTM xy
-
-Step 3: Reorder data as YYYYMMDD, with LC08 or LC09 as sensor indicator
-
-Step 4: Make datacube: lsts, clearmasks, meanbands, era5lst
-
-## Tasks
-
-Task #1: Clear-Sky Situations With Real-World Cloud Patterns
-
-Task #2: Under Heavily-Cloudy Situations
-
-Task #3: Indirect Validation via Estimating Near-Surface Air Temperature
+(Folders are auto-created for each step)
+1. Unzip all Landsat data for the target year. [auto-create `unzip` folder]
+2. (Optional, for ldn & hkg) Reproject data to the same UTM zone.
+3. Clip data to target UTM x/y bounds. [auto-create `clip` folder]
+4. Reorder data files as `[YYYYMMDD]_[LC08/LC09]` (date_sensor). [auto-create `order` folder]
+5. Build datacubes: `lsts`, `clearmasks`, `meanbands`, `era5lst`. [auto-create `datacube` folder]
 
 
-# Project File Structure
+## Experiments: three settings
+We evaluate DELAG's performance across three experimental setups:
 
-This repository contains city-specific geospatial and meteorological analysis scripts:
+### Task #1: Clear-Sky Situations With Real-World Cloud Patterns
+For a day with observed data, use another day's real-world cloud patterns
+```bash
+NYC: Predict index= 91, cloud index=155
+LDN: Predict index=249, cloud index=169
+HKG: Predict index=321, cloud index=177
+```
 
-- `nyc` → New York City
-- `ldn` → London 
-- `hkg` → Hong Kong 
+### Task #2: Heavily-Cloudy Situations
+Reconstruction under heavily cloudy situations. 
+
+### Task #3: Indirect Validation via Estimating Near-Surface Air Temperature
+Indirectly evaluate performance through LST data's capability to estimate near-surface air temperature. 
 
 
-All scripts follow a consistent numeric workflow (01 → 22).
 
-## Project Structure
+## Project Task Status
+### Code cleaning in progress 
+✅ Dependencies  
+✅ Preprocessing Code  
+✅ Task #1: Clear-Sky Situations With Real-World Cloud Patterns  
+✅ Task #1: Data Ready  
+❌ Task #2: Under Heavily-Cloudy Situations  
+❌ Task #2: Data Ready  
+❌ Task #3: Indirect Validation via Near-Surface Air Temperature  
+❌ Task #3: Data Ready  
 
-<details>
-<summary>View directory contents</summary>
-<br/>
 
-```text
-.
-├── nyc_01_ReadData.py
-├── nyc_01b_Reproject.py
-├── nyc_02_Clip.py
-├── nyc_03_Order.py
-├── nyc_04_DataCube.py
-├── nyc_05_Train1.py
-├── nyc_07_GetMean95.py
-├── nyc_10_CombineSmall.py
-├── nyc_12_GP.py
-├── nyc_19_AirTempTest.py
-├── nyc_21_90cloud_gp.py
-└── nyc_22_clear_gp.py
+## The Paper
+
+Liu, Shengjie, Siqin Wang, Lu Zhang. Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty. Quantification. Accepted to IEEE Transactions on Geoscience and Remote Sensing, 2026. [https://arxiv.org/abs/2502.14433](https://arxiv.org/abs/2502.14433)
+
+```bibtex
+@article{liu2026,
+    author = {Liu, Shengjie and Wang, Siqin and Zhang, Lu},
+    title = {Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty Quantification},
+    journal = {IEEE Transactions on Geoscience and Remote Sensing},
+    year = {2026}
+}

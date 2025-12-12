@@ -29,8 +29,8 @@ dpre = 91      # ---- predict date
 
 SPECTRALMODE = 'SEN'   # ---- LDS FOR LANDSAT, SEN FOR SENTINEL2. Default is SEN. 
 
-fp00 = '/mnt/external/MTL5/t20241222_DELAG_tgrs/'     # ---- data path
-SAVEPATH = '/mnt/external/delag/data/'                # ---- save path
+fp00 = './'     # ---- data path
+SAVEPATH = './save/'                # ---- save path
 
 
 #%% cuda
@@ -52,9 +52,8 @@ if SPECTRALMODE=='LDS':
     ims = np.transpose(ims,[2,0,1])
     ims = ims/5000
 elif SPECTRALMODE=='SEN':
-    fp = fp00 + '/demdata/' + 'sen2'+site+'4.tif'
-    ims = gdal.Open(fp, gdal.GA_ReadOnly)
-    ims = ims.ReadAsArray()
+    fp = fp00 + site + '/datacube/' + site + year + 'meanbands_sen.npy'
+    ims = np.load(fp)
     ims = ims/5000
 
 # LST in Kelvin
@@ -182,69 +181,3 @@ for i in range(1200):
                 if not os.path.exists(newpath):
                     os.makedirs(newpath)
                 np.save(newpath+'/prea'+format(count,'03d')+'.npy', imout[day,:,:])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
