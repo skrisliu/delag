@@ -42,6 +42,12 @@ LDN: Predict index=249, cloud index=169
 HKG: Predict index=321, cloud index=177
 ```
 
+#### NYC Task #1
+```python
+python nyc_task1_01.py # Run eATC, get 200 predictions. 
+python nyc_task1_02.py # Based on 200 predictions, Run GP. 
+```
+
 ### Task #2: Heavily-Cloudy Situations
 Reconstruction under heavily cloudy situations. 
 
