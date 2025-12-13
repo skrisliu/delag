@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty Quantification</title>
+  <title>Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With
+    Uncertainty Quantification</title>
   <link rel="stylesheet" href="https://skrisliu.com/css/font.css">
   <link rel="stylesheet" href="https://skrisliu.com/css/style.css">
   <style>
@@ -12,6 +13,92 @@
       padding: 1rem;
       background-color: #e5e7eb;
     }
+
+    /* Terminal container (mimics console window) */
+    .terminal {
+      background-color: #1a1a1a;
+      /* Terminal dark background */
+      border: 1px solid #333;
+      border-radius: 8px 8px 4px 4px;
+      /* Slightly rounded top (terminal style) */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+      font-size: 0.95rem;
+    }
+
+    /* Terminal header (fake title bar) */
+    .terminal-header {
+      background-color: #333;
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Terminal window buttons (red/yellow/green dots) */
+    .terminal-btn {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .terminal-btn.red {
+      background-color: #ff5f56;
+    }
+
+    .terminal-btn.yellow {
+      background-color: #ffbd2e;
+    }
+
+    .terminal-btn.green {
+      background-color: #27c93f;
+    }
+
+    /* Terminal title text */
+    .terminal-title {
+      color: #ccc;
+      font-size: 0.8rem;
+      margin-left: 8px;
+    }
+
+    /* Code block (terminal content) */
+    .terminal-code {
+      padding: 15px 20px;
+      color: #e0e0e0;
+      /* Base text color */
+      line-height: 1.8;
+      overflow-x: auto;
+      /* Horizontal scroll for long lines */
+    }
+
+    /* Bash syntax highlighting */
+    .terminal-code .command {
+      color: #48b9c7;
+    }
+
+    /* Commands (git, cd, curl, etc.) */
+    .terminal-code .path {
+      color: #a8ff60;
+    }
+
+    /* File paths/URLs */
+    .terminal-code .flag {
+      color: #ff9e44;
+    }
+
+    /* Flags (-L, -o, -x) */
+    .terminal-code .exec {
+      color: #ff73fd;
+    }
+
+    /* Executables (python, 7z) */
+    .terminal-code .prompt {
+      color: #00ff00;
+    }
+
+    /* Terminal prompt ($) */
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-C0Y5PM7E86"></script>
   <script>
@@ -37,13 +124,38 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <div class="content">
 
-    <h2>Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty Quantification</h2>
+    <h2>Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With
+      Uncertainty Quantification</h2>
 
     <p>Shengjie Kris Liu: skrisliu@gmail.com</p>
 
     <p>This is a GitHub repo at <a href="https://github.com/skrisliu/delag">github.com/skrisliu/delag</a></p>
-	
-	<p>Code and data updating. Go to <a href="https://github.com/skrisliu/delag">github.com/skrisliu/delag</a> for details.</p>
+
+    <hr>
+
+    <h3>Minimum Run [NYC]</h3>
+
+
+    <!-- Terminal Console -->
+    <div class="terminal">
+      <!-- Terminal fake header (window title bar) -->
+      <div class="terminal-header">
+        <span class="terminal-btn red"></span>
+        <span class="terminal-btn yellow"></span>
+        <span class="terminal-btn green"></span>
+        <span class="terminal-title">bash - Minimum Run [NYC]: Task #1 Clear-Sky With Real-World Cloud Patterns</span>
+      </div>
+
+      <!-- Code block with syntax coloring -->
+      <pre class="terminal-code">
+<code><span class="prompt">$</span> <span class="command">git</span> <span class="flag">clone</span> <span class="path">https://github.com/skrisliu/delag.git</span>
+<span class="prompt">$</span> <span class="command">cd</span> <span class="path">delag</span>
+<span class="prompt">$</span> <span class="command">curl</span> <span class="flag">-L</span> <span class="path">https://github.com/skrisliu/delag/releases/download/v0.1/nyc.7z</span> <span class="flag">-o</span> <span class="path">nyc.7z</span>
+<span class="prompt">$</span> <span class="exec">7z</span> <span class="flag">x</span> <span class="path">./nyc.7z</span> <span class="flag">-o</span><span class="path">./nyc</span>
+<span class="prompt">$</span> <span class="exec">python</span> <span class="path">nyc_task1_01.py</span>
+<span class="prompt">$</span> <span class="exec">python</span> <span class="path">nyc_task1_02.py</span></code>
+        </pre>
+    </div>
 
 
   </div>
