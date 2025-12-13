@@ -17,7 +17,7 @@ cd delag
 curl -L https://github.com/skrisliu/delag/releases/download/v0.1/nyc.7z -o nyc.7z
 7z x ./nyc.7z -o./nyc
 python nyc_task1_01.py
-python nyc_task1_02.py
+python nyc_task1_02.py 
 ```
 
 
