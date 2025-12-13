@@ -10,6 +10,17 @@ Shengjie Kris Liu: skrisliu@gmail.com
 This is a GitHub repo at [github.com/skrisliu/delag](https://github.com/skrisliu/delag)
 
 
+### Minimum Run [NYC]: Task #1 Clear-Sky With Real-World Cloud Patterns
+```bash
+git clone https://github.com/skrisliu/delag.git
+cd delag
+curl -L https://github.com/skrisliu/delag/releases/download/v0.1/nyc.7z -o nyc.7z
+7z x ./nyc.7z -o./nyc
+python nyc_task1_01.py
+python nyc_task1_02.py
+```
+
+
 ## Environment & Package Setup
 Run these commands in sequence (terminal/Anaconda Prompt):
 
@@ -29,6 +40,17 @@ pip install numpy==1.26.4
 3. Clip data to target UTM x/y bounds. [auto-create `clip` folder]
 4. Reorder data files as `[YYYYMMDD]_[LC08/LC09]` (date_sensor). [auto-create `order` folder]
 5. Build datacubes: `lsts`, `clearmasks`, `meanbands`, `era5lst`. [auto-create `datacube` folder]
+
+
+## Ready-to-Use Data
+### Data Download  
+The NTC dataset is hosted in GitHub Releases:   [nyc.7z](https://github.com/skrisliu/delag/releases/download/v0.1/nyc.7z)  
+
+After downloading, unzip it to the `./nyc` folder to run the scripts:  
+```bash
+curl -L https://github.com/skrisliu/delag/releases/download/v0.1/nyc.7z -o nyc.7z
+7z x ./nyc.7z -o./nyc
+```
 
 
 ## Experiments: three settings
