@@ -92,12 +92,12 @@ Indirectly evaluate performance through LST data's capability to estimate near-s
 
 ## The Paper
 
-Liu, Shengjie, Siqin Wang, Lu Zhang. Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty. Quantification. Accepted to IEEE Transactions on Geoscience and Remote Sensing, 2026. [https://arxiv.org/abs/2502.14433](https://arxiv.org/abs/2502.14433)
+Liu, Shengjie, Siqin Wang, Lu Zhang. Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty. Quantification. Accepted to IEEE Transactions on Geoscience and Remote Sensing, 2025. [https://arxiv.org/abs/2502.14433](https://arxiv.org/abs/2502.14433)
 
 ```bibtex
-@article{liu2026daily,
+@article{liu2025daily,
     author = {Liu, Shengjie and Wang, Siqin and Zhang, Lu},
     title = {Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty Quantification},
     journal = {IEEE Transactions on Geoscience and Remote Sensing},
-    year = {2026}
+    year = {2025}
 }
