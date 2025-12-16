@@ -34,6 +34,7 @@ from sklearn.linear_model import LinearRegression
 #import pvlib 
 from pvlib.location import Location
 from scipy.stats import pearsonr
+import os
 
 
 
@@ -86,11 +87,11 @@ im0 = im0*0.00341802 + 149.0
 
 
 #%%
-fig = plt.figure(figsize=(8,6),dpi=200)
-plt.imshow(im0[290,:,:],vmin=280,vmax=310)
-plt.colorbar()
-plt.tight_layout()
-plt.show()
+#fig = plt.figure(figsize=(8,6),dpi=200)
+#plt.imshow(im0[290,:,:],vmin=280,vmax=310)
+#plt.colorbar()
+#plt.tight_layout()
+#plt.show()
 
 
 #%% geo prj
@@ -940,6 +941,7 @@ codes = ['KJRB', 'KEWR', 'KNYC', 'KTEB', 'KJFK', 'KLDJ','KCDW']
 
 
 
+os.makedirs('fig/', exist_ok=True)
 
 if True:
     xlabel = 'Observed T$_{air}$ (K)'
