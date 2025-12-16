@@ -1,14 +1,12 @@
 # DELAG
-Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty Quantification. 
+S. Liu, S. Wang and L. Zhang, "Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty Quantification," in IEEE Transactions on Geoscience and Remote Sensing, doi: [10.1109/TGRS.2025.3643985](https://doi.org/10.1109/TGRS.2025.3643985).
 
-Accepted to IEEE Transactions on Geoscience and Remote Sensing. 
-
-Shengjie Kris Liu: skrisliu@gmail.com 
-
-## Code and data update ongoing: last updated 20251212
+Contact email: skrisliu@gmail.com 
 
 This is a GitHub repo at [github.com/skrisliu/delag](https://github.com/skrisliu/delag)
 
+
+## Code and data update ongoing: last updated 20251216
 
 ### Minimum Run [NYC]: Task #1 Clear-Sky With Real-World Cloud Patterns
 ```bash
@@ -16,8 +14,8 @@ git clone https://github.com/skrisliu/delag.git
 cd delag
 curl -L https://github.com/skrisliu/delag/releases/latest/download/nyc.7z -o nyc.7z
 7z x ./nyc.7z -o./nyc
-python nyc_task1_01.py
-python nyc_task1_02.py 
+python nyc_task1_01.py # Run eATC, get 200 predictions.
+python nyc_task1_02.py # Based on 200 predictions, Run GP. 
 ```
 
 
