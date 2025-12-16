@@ -40,6 +40,8 @@ from scipy.stats import pearsonr
 site = 'nyc'
 year = '2023'
 
+PRED_PATH = 'nyc/nyc_pred_2023.npz'   # download from release
+
 BIGX = []
 BIGY = []
 BIGMASK = []
@@ -61,12 +63,11 @@ end = datetime(2023, 12, 31)
 
 
 #%% load dem ndvi
-demdata = gdal.Open('nyc/dem_'+site+'4.tif', gdal.GA_ReadOnly)
-demdata = demdata.ReadAsArray()
+demdata = np.load('nyc/nyc_dem_2023.npy')
 dems = []
 
-im = gdal.Open('nyc/sen2'+site+'4.tif', gdal.GA_ReadOnly)
-ndvi = im.ReadAsArray()
+
+ndvi = np.load('nyc/nyc_bands_2023.npy')
 ndvi = np.float32(ndvi)
 ndvi = (ndvi[3,:,:] - ndvi[2,:,:])  / (ndvi[3,:,:] + ndvi[2,:,:])
 ndvis = []
@@ -79,106 +80,9 @@ ndvis = []
 im0 = np.zeros([365,1733,1667],dtype=np.float32)
 
 
-
-#%% nyc1
-site = 'nyc1'
-df = site + '/pre1/' + site + '1avg.npy'
-im = np.load(df)
-im = im*0.00341802 + 149.0
-if True:
-    x1,x2 = 0,570
-    y1,y2 = 0,560
-im0[:,x1:x2,y1:y2] = im
-print(im.min(),im.max())
-
-#%% nyc2
-site = 'nyc2'
-df = site + '/pre1/' + site + '1avg.npy'
-im = np.load(df)
-im = im*0.00341802 + 149.0
-if True:
-    x1,x2 = 570,1140
-    y1,y2 = 0,560
-im0[:,x1:x2,y1:y2] = im
-print(im.min(),im.max())
-
-
-#%% nyc3
-site = 'nyc3'
-df = site + '/pre1/' + site + '1avg.npy'
-im = np.load(df)
-im = im*0.00341802 + 149.0
-if True:
-    x1,x2 = 1140,1733
-    y1,y2 = 0,560
-im0[:,x1:x2,y1:y2] = im
-print(im.min(),im.max())
-
-#%% nyc4
-site = 'nyc4'
-df = site + '/pre1/' + site + '1avg.npy'
-im = np.load(df)
-im = im*0.00341802 + 149.0
-if True:
-    x1,x2 = 0,570
-    y1,y2 = 560,1120
-im0[:,x1:x2,y1:y2] = im
-print(im.min(),im.max())
-
-#%% nyc5
-site = 'nyc5'
-df = site + '/pre1/' + site + '1avg.npy'
-im = np.load(df)
-im = im*0.00341802 + 149.0
-if True:
-    x1,x2 = 570,1140
-    y1,y2 = 560,1120
-im0[:,x1:x2,y1:y2] = im
-print(im.min(),im.max())
-
-#%% nyc6
-site = 'nyc6'
-df = site + '/pre1/' + site + '1avg.npy'
-im = np.load(df)
-im = im*0.00341802 + 149.0
-if True:
-    x1,x2 = 1140,1733
-    y1,y2 = 560,1120
-im0[:,x1:x2,y1:y2] = im
-print(im.min(),im.max())
-
-#%% nyc7
-site = 'nyc7'
-df = site + '/pre1/' + site + '1avg.npy'
-im = np.load(df)
-im = im*0.00341802 + 149.0
-if True:
-    x1,x2 = 0,570
-    y1,y2 = 1120,1667
-im0[:,x1:x2,y1:y2] = im
-print(im.min(),im.max())
-
-#%% nyc8
-site = 'nyc8'
-df = site + '/pre1/' + site + '1avg.npy'
-im = np.load(df)
-im = im*0.00341802 + 149.0
-if True:
-    x1,x2 = 570,1140
-    y1,y2 = 1120,1667
-im0[:,x1:x2,y1:y2] = im
-print(im.min(),im.max())
-
-#%% nyc9
-site = 'nyc9'
-df = site + '/pre1/' + site + '1avg.npy'
-im = np.load(df)
-im = im*0.00341802 + 149.0
-if True:
-    x1,x2 = 1140,1733
-    y1,y2 = 1120,1667
-im0[:,x1:x2,y1:y2] = im
-print(im.min(),im.max())
+im0 = np.load(PRED_PATH)['a']
+im0 = im0.astype(np.float32)
+im0 = im0*0.00341802 + 149.0
 
 
 #%%
