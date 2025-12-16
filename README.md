@@ -14,7 +14,7 @@ This is a GitHub repo at [github.com/skrisliu/delag](https://github.com/skrisliu
 ```bash
 git clone https://github.com/skrisliu/delag.git
 cd delag
-curl -L https://github.com/skrisliu/delag/releases/download/v0.1/nyc.7z -o nyc.7z
+curl -L https://github.com/skrisliu/delag/releases/latest/download/nyc.7z -o nyc.7z
 7z x ./nyc.7z -o./nyc
 python nyc_task1_01.py
 python nyc_task1_02.py 
@@ -42,13 +42,12 @@ pip install numpy==1.26.4
 5. Build datacubes: `lsts`, `clearmasks`, `meanbands`, `era5lst`. [auto-create `datacube` folder]
 
 
-## Ready-to-Use Data
-### Data Download  
-The NTC dataset is hosted in GitHub Releases:   [nyc.7z](https://github.com/skrisliu/delag/releases/download/v0.1/nyc.7z)  
-
-After downloading, unzip it to the `./nyc` folder to run the scripts:  
+## Ready-to-Use Training/Testing Dataset
+### NYC
+1. The NYC dataset is hosted via GitHub Releases:   [nyc.7z](https://github.com/skrisliu/delag/releases/latest/download/nyc.7z)  
+2. After downloading, unzip it to the `./nyc` folder to run the scripts:  
 ```bash
-curl -L https://github.com/skrisliu/delag/releases/download/v0.1/nyc.7z -o nyc.7z
+curl -L https://github.com/skrisliu/delag/releases/latest/download/nyc.7z -o nyc.7z
 7z x ./nyc.7z -o./nyc
 ```
 
@@ -65,7 +64,7 @@ HKG: Predict index=321, cloud index=177
 ```
 
 #### NYC Task #1
-```python
+```bash
 python nyc_task1_01.py # Run eATC, get 200 predictions. 
 python nyc_task1_02.py # Based on 200 predictions, Run GP. 
 ```
@@ -75,6 +74,19 @@ Reconstruction under heavily cloudy situations.
 
 ### Task #3: Indirect Validation via Estimating Near-Surface Air Temperature
 Indirectly evaluate performance through LST data's capability to estimate near-surface air temperature. 
+1. The nyc.7z file should be downloaded and unzip to ./nyc
+2. Download the full prediction data [~1.6GB]
+3. Unzip to current folder
+4. Run [nyc_task3_plot_airtemp.py](nyc_task3_plot_airtemp.py) to estimate air temperature from the predicted surface temperature.
+
+```bash
+# curl -L https://github.com/skrisliu/delag/releases/latest/download/nyc.7z -o nyc.7z
+# 7z x ./nyc.7z -o./nyc
+curl -L https://github.com/skrisliu/delag/releases/latest/download/nyc_pred_2023.zip -o nyc_pred_2023.zip
+7z x nyc_pred_2023.zip
+python nyc_task3_plot_airtemp.py
+```
+
 
 
 
@@ -99,5 +111,6 @@ Liu, Shengjie, Siqin Wang, Lu Zhang. Daily Land Surface Temperature Reconstructi
     author = {Liu, Shengjie and Wang, Siqin and Zhang, Lu},
     title = {Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty Quantification},
     journal = {IEEE Transactions on Geoscience and Remote Sensing},
-    year = {2025}
+    year = {2025}, 
+    doi = {10.1109/TGRS.2025.3643985}
 }
