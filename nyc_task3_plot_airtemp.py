@@ -67,7 +67,7 @@ demdata = np.load('nyc/nyc_dem_2023.npy')
 dems = []
 
 
-ndvi = np.load('nyc/nyc_bands_2023.npy')
+ndvi = np.load('nyc/nyc_sen2bands_2023.npy')
 ndvi = np.float32(ndvi)
 ndvi = (ndvi[3,:,:] - ndvi[2,:,:])  / (ndvi[3,:,:] + ndvi[2,:,:])
 ndvis = []
