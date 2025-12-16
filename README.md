@@ -86,8 +86,8 @@ Indirectly evaluate performance through LST data's capability to estimate near-s
 ✅ Task #1: Data Ready  
 ❌ Task #2: Under Heavily-Cloudy Situations  
 ❌ Task #2: Data Ready  
-❌ Task #3: Indirect Validation via Near-Surface Air Temperature  
-❌ Task #3: Data Ready  
+✅ Task #3: Indirect Validation via Near-Surface Air Temperature  
+✅ Task #3: Data Ready  
 
 
 ## The Paper
