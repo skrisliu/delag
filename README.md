@@ -104,7 +104,7 @@ python nyc_task3_plot_airtemp.py
 
 ## The Paper
 
-Liu, Shengjie, Siqin Wang, Lu Zhang. Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty. Quantification. Accepted to IEEE Transactions on Geoscience and Remote Sensing, 2025. [https://arxiv.org/abs/2502.14433](https://arxiv.org/abs/2502.14433)
+Liu, Shengjie, Siqin Wang, Lu Zhang. Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty. Quantification. IEEE Transactions on Geoscience and Remote Sensing, 2025. [https://doi.org/10.1109/TGRS.2025.3643985](https://doi.org/10.1109/TGRS.2025.3643985)
 
 ```bibtex
 @article{liu2025daily,

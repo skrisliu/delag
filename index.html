@@ -158,7 +158,33 @@
     </div>
 
 
-  </div>
+    <hr>
+
+    <h3>Minimum Run [NYC] Task #3: Estimate near-surface air temperature as indirect validation (Fig. 12)</h3>
+
+
+    <!-- Terminal Console -->
+    <div class="terminal">
+      <!-- Terminal fake header (window title bar) -->
+      <div class="terminal-header">
+        <span class="terminal-btn red"></span>
+        <span class="terminal-btn yellow"></span>
+        <span class="terminal-btn green"></span>
+        <span class="terminal-title">bash - Minimum Run [NYC] Task #3: Indirect Validation via Estimating Near-Surface
+          Air Temperature</span>
+      </div>
+
+
+      <!-- Code block with syntax coloring -->
+      <pre class="terminal-code">
+<code><span class="comment"># curl -L https://github.com/skrisliu/delag/releases/latest/download/nyc.7z -o nyc.7z</span>
+<span class="comment"># 7z x ./nyc.7z -o./nyc</span>
+<span class="prompt">$</span> <span class="command">curl</span> <span class="flag">-L</span> <span class="path">https://github.com/skrisliu/delag/releases/latest/download/nyc_pred_2023.zip</span> <span class="flag">-o</span> <span class="path">nyc_pred_2023.zip</span>
+<span class="prompt">$</span> <span class="exec">7z</span> <span class="flag">x</span> <span class="path">nyc_pred_2023.zip</span>
+<span class="prompt">$</span> <span class="exec">python</span> <span class="path">nyc_task3_plot_airtemp.py</span></code>
+</pre>
+
+    </div>
 </body>
 
 </html>
