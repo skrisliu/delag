@@ -1,5 +1,5 @@
 # DELAG
-S. Liu, S. Wang and L. Zhang, "Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty Quantification," in IEEE Transactions on Geoscience and Remote Sensing, doi: [10.1109/TGRS.2025.3643985](https://doi.org/10.1109/TGRS.2025.3643985).
+S. Liu, S. Wang and L. Zhang, 2025. "Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With Uncertainty Quantification," in IEEE Transactions on Geoscience and Remote Sensing, doi: [10.1109/TGRS.2025.3643985](https://doi.org/10.1109/TGRS.2025.3643985).
 
 Contact email: skrisliu@gmail.com 
 
@@ -48,6 +48,10 @@ pip install numpy==1.26.4
 curl -L https://github.com/skrisliu/delag/releases/latest/download/nyc.7z -o nyc.7z
 7z x ./nyc.7z -o./nyc
 ```
+
+[![NYC Sample Data](im/nyc_thumbnail.webp)](im/nyc_web4096.webp)
+
+
 
 
 ## Experiments: three settings

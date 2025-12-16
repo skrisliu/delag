@@ -127,7 +127,15 @@
     <h2>Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With
       Uncertainty Quantification</h2>
 
-    <p>Shengjie Kris Liu: skrisliu@gmail.com</p>
+    <p>Shengjie Kris Liu: <a href="mailto:skrisliu@gmail.com">skrisliu@gmail.com</a></p>
+
+    <p>
+      S. Liu, S. Wang and L. Zhang, 2025.
+      "Daily Land Surface Temperature Reconstruction in Landsat Cross-Track Areas Using Deep Ensemble Learning With
+      Uncertainty Quantification," in
+      <i>IEEE Transactions on Geoscience and Remote Sensing</i>,
+      doi: <a href="https://doi.org/10.1109/TGRS.2025.3643985">10.1109/TGRS.2025.3643985</a>.
+    </p>
 
     <p>This is a GitHub repo at <a href="https://github.com/skrisliu/delag">github.com/skrisliu/delag</a></p>
 
@@ -157,26 +165,40 @@
         </pre>
     </div>
 
-
     <hr>
 
-    <h3>Minimum Run [NYC] Task #3: Estimate near-surface air temperature as indirect validation (Fig. 12)</h3>
+    <h3>NYC Sample Data<h3>
+
+        The generated temperature data can be downloaded at <a
+          href="https://github.com/skrisliu/delag/releases/latest/download/nyc_pred_2023.zip">[NYC 30 m Daily LST
+          2023]</a>.
+
+        <a href="im/nyc_web4096.webp">
+          <picture>
+            <source srcset="im/nyc_thumbnail.webp" type="image/webp">
+            <img src="im/nyc_thumbnail.jpg" alt="NYC Sample Data" width="100%">
+          </picture>
+        </a>
+
+        <hr>
+
+        <h3>Minimum Run [NYC] Task #3: Estimate near-surface air temperature as indirect validation (Fig. 12)</h3>
+
+        <!-- Terminal Console -->
+        <div class="terminal">
+          <!-- Terminal fake header (window title bar) -->
+          <div class="terminal-header">
+            <span class="terminal-btn red"></span>
+            <span class="terminal-btn yellow"></span>
+            <span class="terminal-btn green"></span>
+            <span class="terminal-title">bash - Minimum Run [NYC] Task #3: Indirect Validation via Estimating
+              Near-Surface
+              Air Temperature</span>
+          </div>
 
 
-    <!-- Terminal Console -->
-    <div class="terminal">
-      <!-- Terminal fake header (window title bar) -->
-      <div class="terminal-header">
-        <span class="terminal-btn red"></span>
-        <span class="terminal-btn yellow"></span>
-        <span class="terminal-btn green"></span>
-        <span class="terminal-title">bash - Minimum Run [NYC] Task #3: Indirect Validation via Estimating Near-Surface
-          Air Temperature</span>
-      </div>
-
-
-      <!-- Code block with syntax coloring -->
-      <pre class="terminal-code">
+          <!-- Code block with syntax coloring -->
+          <pre class="terminal-code">
 <code><span class="comment"># curl -L https://github.com/skrisliu/delag/releases/latest/download/nyc.7z -o nyc.7z</span>
 <span class="comment"># 7z x ./nyc.7z -o./nyc</span>
 <span class="prompt">$</span> <span class="command">curl</span> <span class="flag">-L</span> <span class="path">https://github.com/skrisliu/delag/releases/latest/download/nyc_pred_2023.zip</span> <span class="flag">-o</span> <span class="path">nyc_pred_2023.zip</span>
@@ -184,7 +206,11 @@
 <span class="prompt">$</span> <span class="exec">python</span> <span class="path">nyc_task3_plot_airtemp.py</span></code>
 </pre>
 
-    </div>
+        </div>
+
+        <hr>
+
+
 </body>
 
 </html>
