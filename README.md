@@ -41,7 +41,22 @@ pip install numpy==1.26.4
 
 
 ## Ready-to-Use Training/Testing Dataset
-### NYC
+
+### Datasets and Predictions
+#### NYC
+1. NYC Dataset: [nyc.7z](https://github.com/skrisliu/delag/releases/latest/download/nyc.7z)
+2. NYC Predictions LST 2023: [nyc_pred_2023.zip](https://github.com/skrisliu/delag/releases/latest/download/nyc_pred_2023.zip)
+
+#### London (LDN)
+1. LDN Dataset: [ldn.7z](https://github.com/skrisliu/delag/releases/latest/download/ldn.7z)
+2. LDN Predictions LST 2023: [ldn_pred_2023.zip](https://github.com/skrisliu/delag/releases/latest/download/ldn_pred_2023.zip)
+
+#### Hong Kong (HKG)
+1. HKG Dataset: [hkg.7z](https://github.com/skrisliu/delag/releases/latest/download/hkg.7z)
+2. HKG Predictions LST 2023: [hkg_pred_2023.zip](https://github.com/skrisliu/delag/releases/latest/download/hkg_pred_2023.zip)
+
+
+### Get Datasets [NYC as Example] 
 1. The NYC dataset is hosted via GitHub Releases:   [nyc.7z](https://github.com/skrisliu/delag/releases/latest/download/nyc.7z)  
 2. After downloading, unzip it to the `./nyc` folder to run the scripts:  
 ```bash
